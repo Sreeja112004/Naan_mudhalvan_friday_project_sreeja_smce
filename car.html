@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars - Car Rental</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:black;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.about-section {
+    padding: 50px 0;
+}
+
+.about-section h2 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.car-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.car {
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.car img {
+    width: 100%;
+    height: auto;
+}
+
+.car-description {
+    padding: 20px;
+}
+
+.car-description h3 {
+    margin-top: 0;
+}
+
+
+
+</style>
+</head>
+<body>
+    {%block content%}
+    <header>
+        <div class="container">
+            <center><h1>Car Rental Service</h1></center>
+            <nav>
+                <ul>
+                    <li><a href="home">Home</a></li>
+                    <li><a href="cars">Cars</a></li>
+                    <li><a href="about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="about-section">
+        <div class="container">
+            <center><h2 style="color : white;">Cars</h2></center>
+            <p>Welcome to Car Rental Service, your trusted partner for all your car rental needs. We are committed to providing you with top-notch service, a wide selection of vehicles, and competitive prices.</p>
+            
+            <div class="car-gallery">
+                <div class="car">
+                 <center> <h3>Compact</h3></center>
+                    <img src="https://www.shutterstock.com/image-illustration/small-modern-compact-car-260nw-394558708.jpg" alt="Compact"
+                    <div class="car-description">
+                        <p>Compact car is a vehicle size class—predominantly used in North America—that sits between subcompact cars and mid-size cars. "Small family car" is a British term and a part of the C-segment in the European car classification.</p>
+                   </br> 
+                   </div>
+                </div>
+                <div class="car">
+                   <center> <h3> Sedan</h3></center>
+                    <img src="https://imgd.aeplcdn.com/600x337/n/cw/ec/121943/verna-exterior-right-front-three-quarter-101.jpeg?isig=0&q=80" alt="Sedan">
+                    <div class="car-description">
+                        <p>A sedan is defined as a 4-door passenger car with a trunk that is separate from the passengers with a three-box body: the engine, the area for passengers, and the trunk.</p>
+                       </br>  
+                   </div>
+                </div>
+                <div class="car">
+                    <center><h3>SUV</h3></center>
+                    <img src="https://imgd.aeplcdn.com/600x337/n/cw/ec/40432/scorpio-n-exterior-right-front-three-quarter-75.jpeg?isig=0&q=80" alt="SUV">
+                    <div class="car-description">
+                        <p>SUV stands for 'Sports Utility Vehicle', a fairly loose term but one that generally refers to stylish, sleek looking vehicles that offer elegant city driving but also handle rugged terrain thanks to a typical 4x4 capability.</p>
+                     </br> 
+                 </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ {%endblock%}
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Booking - Car Rental</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+   background-image:url('https://img.freepik.com/free-photo/sports-car-races-through-dark-blurred-motion-generative-ai_188544-12490.jpg');
+   background-position:center;  
+   background-repeat:no-repeat; 
+   background-size:cover;
+   border:50px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+h1{
+    font-size: 50px;
+    line-height: 1.6;
+    color:white;   
+}
+  
+form {
+     max-width: 400px;
+    margin: 0 auto;
+   border-radius: 5px;
+  background-color: black;
+  padding: 20px;
+}
+
+input[type="text"],
+input[type="date"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+label {
+    font-weight: bold;
+}
+</style>
+</head>
+<body>
+    {%block content%}
+     <header>
+        <div class="container">
+            <center><h1>Car Rental Service</h1></center>
+            <nav>
+                <ul>
+                    <li><a href="home">Home</a></li>
+                    <li><a href="cars">Cars</a></li>
+                    <li><a href="about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <center><h1>Car Booking</h1></center>
+    <form id="bookingForm" action="confirm" method="POST">
+        {%csrf_token%}
+        <div>
+            <label for="pickupLocation" style="color:white;">Pickup Location:</label><br>
+            <input type="text" id="pickupLocation" name="pickupLocation" required>
+        </div>
+        <div>
+            <label for="dropoffLocation"style="color:white;">Dropoff Location:</label><br>
+            <input type="text" id="dropoffLocation" name="dropoffLocation" required>
+        </div>
+        <div>
+            <label for="pickupDate"style="color:white;">Pickup Date:</label><br>
+            <input type="date" id="pickupDate" name="pickupDate" required>
+        </div>
+        <div>
+            <label for="dropoffDate"style="color:white;">Dropoff Date:</label><br>
+            <input type="date" id="dropoffDate" name="dropoffDate" required>
+        </div>
+        <div>
+            <label for="carType"style="color:white;">Car Type:</label><br>
+            <input type="text" id="cartype"name="cartype" required>
+        </div>
+        <button type="submit">Book Now</button>
+    </form>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById('bookingForm');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        if (validateForm()) {
+            // Code for submitting the form (e.g., AJAX request or redirect)
+            alert('Form submitted successfully!');
+            // form.submit(); // Uncomment this line to submit the form
+        }
+    });
+
+    function validateForm() {
+        const pickupLocation = document.getElementById('pickupLocation').value.trim();
+        const dropoffLocation = document.getElementById('dropoffLocation').value.trim();
+        const pickupDate = document.getElementById('pickupDate').value.trim();
+        const dropoffDate = document.getElementById('dropoffDate').value.trim();
+        const cartype = document.getElementById('cartype').value.trim();
+
+        if (pickupLocation === '' || dropoffLocation === '' || pickupDate === '' || dropoffDate === '' || cartype === '') {
+            alert('All fields are required');
+            return false;
+        }
+
+
+        return true;
+    }
+});
+</script>
+   {%endblock%}
+</body>
+</html>

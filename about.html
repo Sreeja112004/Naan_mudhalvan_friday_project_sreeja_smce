@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Car Rental</title>
+    <style>
+body {
+     background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs44y8UlJ8Zz7b6P64a8RLNuc_IBGEWeQ5SVWLRbDWHg&s');
+      background-position:center;  
+      background-repeat:no-repeat; 
+      background-size:cover;
+     
+     min-height:100vh;
+    width:100%;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.about-section {
+    padding: 50px 0;
+    
+}
+
+.about-section h3 {
+    margin: 0;
+    font-size: 36px;
+    
+}
+
+.about-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    color:white;   
+}
+
+
+</style>
+</head>
+<body>
+    {%block content%}
+    <header>
+        <div class="container">
+            <center><h1>Car Rental Service</h1></center>
+            <nav>
+                <ul>
+                    <li><a href="home">Home</a></li>
+                    <li><a href="cars">Cars</a></li>
+                    <li><a href="about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="about-section">
+        <div class="container">
+            <h3 style="color:white;">About Us</h3>
+            <h1><p>Welcome to Car Rental Service, your trusted partner for all your car rental needs. We provide a wide range of vehicles to suit every budget and requirement, whether you need a compact car for a city trip or a spacious SUV for a family vacation.</p></h1>
+        <h2>Objective</h2>
+          <h1><p>The project's goal is to automate vehicle rental and reservation so that clients don't have to waste time calling and waiting for a vehicle.</p><h1>   
+        <h2>Mission</h2> 
+        <h1><p>Our mission is to make car rental simple, convenient, and affordable for everyone. With easy online booking, transparent pricing, and excellent customer service, we strive to exceed your expectations every time you rent with us.</p></h1>
+        </div>
+    </section>
+  {%endblock%}
+</body>
+</html>

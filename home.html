@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    {%block content%}
+    <header>
+        <h1>Car Rental</h1>
+        <nav>
+            <ul>
+                <li><a href="home">Home</a></li>
+                <li><a href="cars">Cars</a></li>
+                <li><a href="about">About</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160
+                <a href="register" class="btn">REGISTER</a>&#160&#160&#160&#160&#160&#160&#160&#160
+	            <a href="login" class="btn">LOGIN</a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>Find Your Perfect Ride</h2>
+            <p>Explore our wide range of cars available for rent at affordable prices.</p>
+           
+            <button type="button">BROWSE CARS</button>
+        </section>
+        <section class="features">
+            <h2>Why Choose Us?</h2>
+            <div class="feature">
+                
+                <h3>Wide Selection</h3>
+                <p>Choose from a variety of car models to suit your needs.</p>
+            </div>
+            <div class="feature">
+               
+                <h3>Affordable Prices</h3>
+                <p>Enjoy competitive rental rates and special discounts.</p>
+            </div>
+            <div class="feature">
+                
+                <h3>Easy Booking</h3>
+                <p>Simple and hassle-free online booking process.</p>
+            </div>
+        </section>
+    </main>
+    
+    {%endblock%}
+</body>
+<style>
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+	background-image:url('https://wallpapers.com/images/hd/black-car-4k-w132c4fj1juguqjr.jpg');
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center;
+	min-height:100vh;
+	width:100%;
+}
+
+header {
+    background-color:#333;
+    color: #FF00FF;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+	color:#fff;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color:  #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+	color:white;
+	font-size:20px;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: green;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.feature {
+    text-align: center;
+}
+
+.feature img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+
+</style>
+</html>
